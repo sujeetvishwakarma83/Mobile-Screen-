@@ -1,115 +1,114 @@
 <!DOCTYPE html>
-<!-- saved from url=(0058)file:///F:/html%20project/.codegpt/modi%20ki%20moible.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mobile Home Screen</title>
   <style>
-   body {
-  margin: 0;
-  background: #de720d;
-background: linear-gradient(90deg, rgba(222, 114, 13, 0.9) 6%, rgba(87, 199, 133, 1) 51%, rgba(235, 59, 59, 1) 98%);
-  display: flex;
-  justify-content: center;   /* horizontal center */
-  align-items: center;       /* vertical center */
-  height: 100vh;             /* full viewport height */
-}
+    body {
+      margin: 0;
+      background: #de720d;
+      background: linear-gradient(90deg, rgba(222, 114, 13, 0.9) 6%, rgba(87, 199, 133, 1) 51%, rgba(235, 59, 59, 1) 98%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
     .home-screen {
-       width: 720px;
-       height: 1600px;
-       justify-content: center;
-       background-image: url('images/background image.jpg');
-       background-size: 720px 1600px;
-       background-position: center;
-       background-repeat: no-repeat;
-       border: 7px solid black;
-       border-radius: 40px;
-    }
-    .home-screen {
-  position: relative;
+      width: 720px;
+      height: 1600px;
+      justify-content: center;
+      background-image: url('images/background image.jpg');
+      background-size: 720px 1600px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 7px solid black;
+      border-radius: 40px;
+      overflow-y: auto;
+      position: relative;
     }
 
     .weather p {
       justify-content: center;
       text-align: center;
       color: white;
-      font-size:40px;
+      font-size: 40px;
       padding-top: 410px;
     }
-    .search {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  padding-top: 35px;
-  cursor: text;
-}
 
-.search img {
-  width: 85%;         /* ya fixed like 600px */
-  max-width: 600px;   /* max limit, responsive ke liye */
-  height: auto;
-}
+    .search {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      padding-top: 35px;
+    }
+
+    .search img {
+      width: 85%;
+      max-width: 600px;
+      height: auto;
+    }
 
     .icon {
       display: flex;
       justify-content: center;
       gap: 30px;
-      cursor: pointer;
     }
-    .icon img p {
-      margin-bottom: 30px ;
-    }
-    .logo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
 
     .logo-box {
       text-align: center;
+      cursor: pointer;
     }
+
     .logo {
       width: 130px;
       height: auto;
       border-radius: 47px;
     }
+
+    .logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
     .logo-name {
       margin-top: 8px;
       font-size: 24px;
       color: white;
     }
+
     .icon2 {
       display: flex;
       justify-content: center;
       gap: 30px;
       padding-top: 140px;
-      cursor: pointer;
     }
+
     .logo2 {
       width: 130px;
       height: auto;
       border-radius: 47px;
     }
-    #camera-preview {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 720px;
-  height: 1600px;
-  z-index: 999;
-  border-radius: 40px;
-  object-fit: cover;
-  display: none; /* initially hidden */
-}
 
     .logo2:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #camera-preview {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 720px;
+      height: 1600px;
+      z-index: 999;
+      border-radius: 40px;
+      object-fit: cover;
+      display: none;
+    }
 
     footer {
       font-size: 35px;
@@ -119,67 +118,85 @@ background: linear-gradient(90deg, rgba(222, 114, 13, 0.9) 6%, rgba(87, 199, 133
       font-family: Brush Script;
       margin-top: 100px;
     }
+
+    /* Iframe styling */
+    #app-frame {
+      width: 100%;
+      height: 600px;
+      border: none;
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div class="home-screen">
     <div>
-     <div class="weather">
-      <p> 🌥️ 22°C <br> Thunhi <br> Partly cloudy<br>
-      Tomorrow: High of 28°C</p>
-     </div>
-  <div class="search">
-  <img src="images/google search bar.png" alt="search logo">
-  </div>
-  <div class="icon">
-    <a href="index1.html">
-    <div class="logo-box">
-    <img src="images/To do list.png" alt="store logo" class="logo">
-    <p class="logo-name">To Do List</p>
-    </div>
-      </a>
-    <div class="logo-box">
-    <img src="images/gallary.png" alt="gallery logo" class="logo">
-    <p class="logo-name">Gallery</p>
-    </div>
-    <div class="logo-box">
-    <img src="images/play store.png" alt="play store logo" class="logo">
-    <p class="logo-name">Play Stor</p>
-    </div>
-    <div class="logo-box">
-    <img src="images/google app.png" alt="Google apps" class="logo">
-    <p class="logo-name">Google</p>
-    </div>
-  </div>
-  <div class="icon2">
-    <img src="images/phone.png" alt="phone logo" class="logo2">
-    <img src="images/message.png" alt="msg logo" class="logo2">
-    <img src="images/internet.png" alt="internet logo" class="logo2">
-    <img src="images/camera.png" alt="camera logo" class="logo2" onclick="openCamera()">
-    <video id="camera-preview" autoplay></video>
+      <div class="weather">
+        <p>🌥️ 22°C <br> Thunhi <br> Partly cloudy<br>Tomorrow: High of 28°C</p>
+      </div>
 
+      <div class="search">
+        <img src="images/google search bar.png" alt="search logo">
+      </div>
+
+      <div class="icon">
+        <!-- ✅ To Do List Icon with onclick -->
+        <div class="logo-box" onclick="openPage()">
+          <img src="images/To do list.png" alt="To Do List" class="logo">
+          <p class="logo-name">To Do List</p>
+        </div>
+
+        <!-- Other icons -->
+        <div class="logo-box">
+          <img src="images/gallary.png" alt="gallery logo" class="logo">
+          <p class="logo-name">Gallery</p>
+        </div>
+        <div class="logo-box">
+          <img src="images/play store.png" alt="play store logo" class="logo">
+          <p class="logo-name">Play Store</p>
+        </div>
+        <div class="logo-box">
+          <img src="images/google app.png" alt="Google apps" class="logo">
+          <p class="logo-name">Google</p>
+        </div>
+      </div>
+
+      <div class="icon2">
+        <img src="images/phone.png" alt="phone logo" class="logo2">
+        <img src="images/message.png" alt="msg logo" class="logo2">
+        <img src="images/internet.png" alt="internet logo" class="logo2">
+        <img src="images/camera.png" alt="camera logo" class="logo2" onclick="openCamera()">
+        <video id="camera-preview" autoplay></video>
+      </div>
+
+      <!-- ✅ Iframe to load index1.html -->
+      <iframe id="app-frame"></iframe>
+
+    </div>
+    <footer></footer>
   </div>
-  </div>
-  <footer>
-    
-  </footer>
-  </div>
+
+  <!-- ✅ Scripts -->
   <script>
-  function openCamera() {
-    const video = document.getElementById("camera-preview");
-    video.style.display = "block"; // Show video
+    function openCamera() {
+      const video = document.getElementById("camera-preview");
+      video.style.display = "block";
 
-    navigator.mediaDevices.getUserMedia({ video: true })
-      .then(function (stream) {
-        video.srcObject = stream;
-      })
-      .catch(function (err) {
-        alert("Camera access denied or not supported!");
-        console.error(err);
-      });
-  }
-</script>
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+          video.srcObject = stream;
+        })
+        .catch(function (err) {
+          alert("Camera access denied or not supported!");
+          console.error(err);
+        });
+    }
 
-  
+    function openPage() {
+      const frame = document.getElementById("app-frame");
+      frame.style.display = "block";
+      frame.src = "index1.html";
+    }
+  </script>
 </body>
 </html>
